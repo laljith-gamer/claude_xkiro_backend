@@ -8,81 +8,57 @@ A proxy backend that connects Claude Desktop to free AI models via the [xKiro](h
 - Model mapping: each Claude model selector maps to a different free model
 - Easy setup with batch scripts
 
-## Quick Start
+## Setup (PowerShell)
 
-1. Clone this repo
-2. Copy `.env.example` to `.env` and add your xKiro API key
-3. Run `setup.bat` to install dependencies
-4. Run `start-proxy.bat` to start the proxy
-5. Configure Claude Desktop to point to `http://127.0.0.1:3000`
-
-## Setup via PowerShell (Step by Step)
-
-Open PowerShell and run these commands one by one:
-
-### Step 1: Navigate to the project folder
+### Step 1: Clone the repo
 ```powershell
-cd C:\Users\ASUS\claude-desktop-config
+git clone https://github.com/laljith-gamer/claude_xkiro_backend.git
+cd claude_xkiro_backend
 ```
-> This moves you into the project directory where all your files are.
+> Downloads the project and enters the folder.
 
-### Step 2: Initialize a new Git repository
+### Step 2: Install dependencies
 ```powershell
-git init
+pip install flask requests python-dotenv
 ```
-> This creates a hidden `.git` folder and turns your project into a Git repository.
+> Installs the Python packages needed to run the proxy.
 
-### Step 3: Add a `.gitignore` file
+### Step 3: Create your `.env` file
 ```powershell
-# Create .gitignore to prevent sensitive files (like .env with API keys) from being pushed
-echo ".env" >> .gitignore
+copy .env.example .env
 ```
-> ⚠️ **Important**: Always add `.gitignore` BEFORE committing, so your API keys in `.env` never get pushed to GitHub.
+> Then open `.env` and paste your xKiro API key. Get a free key at [xkiro.com](https://xkiro.com) (5M tokens/day, no credit card).
 
-### Step 4: Create the README file
+### Step 4: Start the proxy
 ```powershell
-echo "# claude_xkiro_backend" >> README.md
+python proxy.py
 ```
-> This creates the `README.md` file that GitHub displays on your repo page.
+> Starts the local proxy server on `http://127.0.0.1:3000`.
 
-### Step 5: Stage all files for commit
-```powershell
-git add .
+### Step 5: Configure Claude Desktop
+Point Claude Desktop to:
 ```
-> `git add .` stages **all** files except those listed in `.gitignore` (like `.env`). You can also use `git add README.md` to add specific files only.
-
-### Step 6: Set your Git identity (first time only)
-```powershell
-git config user.name "laljith-gamer"
-git config user.email "laljith-gamer@users.noreply.github.com"
+http://127.0.0.1:3000
 ```
-> Git needs to know who is making the commit. You only need to do this once per repo (or use `--global` to set it for all repos).
-
-### Step 7: Commit the files
-```powershell
-git commit -m "first commit"
-```
-> This saves a snapshot of your staged files with the message "first commit".
-
-### Step 8: Rename the branch to `main`
-```powershell
-git branch -M main
-```
-> Git defaults to `master`, but GitHub uses `main`. The `-M` flag force-renames your branch to match.
-
-### Step 9: Add the remote GitHub repository
-```powershell
-git remote add origin https://github.com/laljith-gamer/claude_xkiro_backend.git
-```
-> This links your local repo to the GitHub repo so Git knows where to push.
-
-### Step 10: Push to GitHub
-```powershell
-git push -u origin main
-```
-> This uploads all your committed files to GitHub. The `-u` flag sets `origin main` as the default, so future pushes only need `git push`.
+> Update your `claude_desktop_config.json` or Claude Desktop settings to use the local proxy URL.
 
 ---
+
+## Model Mapping
+
+Each Claude model in the selector maps to a free xKiro model:
+
+| Claude Model | xKiro Model |
+|-------------|-------------|
+| Opus 4.8 | `deepseek/deepseek-v4-pro` |
+| Sonnet 5 | `qwen/qwen3.8-max:free` |
+| Fable 5 | `qwen/qwen3-coder-plus:free` |
+| Opus 5 | `deepseek/deepseek-v4-flash` |
+| Sonnet 4.6 | `mistralai/mistral-medium-3.5` |
+| Haiku 4.5 | `minimax/minimax-m3:free` |
+| Opus 4.6 | `qwen/qwen3.7-max:free` |
+| Fable 5.1 | `openai/gpt-5.3-codex-spark` |
+| Opus 4.7 | `qwen/qwen3.5-397b-a17b:free` |
 
 ## Files
 
