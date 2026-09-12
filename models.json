@@ -1,0 +1,374 @@
+{
+  "_description": "All FREE models available on xKiro (api.xkiro.com). Use any model ID in .env as UPSTREAM_MODEL.",
+  "_daily_quota": "5 million tokens/day, no credit card required",
+  "_signup": "https://xkiro.com",
+  "recommended_defaults": {
+    "best_overall": "deepseek/deepseek-v4-pro",
+    "best_for_coding": "qwen/qwen3-coder-plus:free",
+    "fastest": "deepseek/deepseek-v4-flash",
+    "best_with_vision": "qwen/qwen3.8-max:free",
+    "largest_context": "qwen/qwen3-coder-plus:free"
+  },
+  "free_models": [
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1048576,
+      "max_output": 65536
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1048576,
+      "max_output": 65536
+    },
+    {
+      "id": "deepseek/deepseek-v3.2",
+      "name": "DeepSeek V3.2",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 131072,
+      "max_output": 65536
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "name": "DeepSeek V3.1",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 163840,
+      "max_output": 65536
+    },
+    {
+      "id": "openai/gpt-5.3-codex-spark",
+      "name": "Codex 5.3 Spark",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 128000,
+      "max_output": 65536
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "name": "Mistral Large 3",
+      "vision": true,
+      "tools": true,
+      "reasoning": false,
+      "context_length": 256000,
+      "max_output": 16384
+    },
+    {
+      "id": "mistralai/mistral-medium-3.5",
+      "name": "Mistral Medium 3.5",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 256000,
+      "max_output": 65536
+    },
+    {
+      "id": "mistralai/mistral-small-2603",
+      "name": "Mistral Small 4",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 256000,
+      "max_output": 65536
+    },
+    {
+      "id": "mistralai/codestral-2508",
+      "name": "Codestral",
+      "vision": false,
+      "tools": true,
+      "reasoning": false,
+      "context_length": 256000,
+      "max_output": 16384
+    },
+    {
+      "id": "mistralai/devstral-medium",
+      "name": "Devstral 2",
+      "vision": false,
+      "tools": true,
+      "reasoning": false,
+      "context_length": 256000,
+      "max_output": 16384
+    },
+    {
+      "id": "mistralai/ministral-14b",
+      "name": "Ministral 3 14B",
+      "vision": true,
+      "tools": true,
+      "reasoning": false,
+      "context_length": 256000,
+      "max_output": 8192
+    },
+    {
+      "id": "mistralai/ministral-8b",
+      "name": "Ministral 3 8B",
+      "vision": true,
+      "tools": true,
+      "reasoning": false,
+      "context_length": 256000,
+      "max_output": 8192
+    },
+    {
+      "id": "mistralai/ministral-3b",
+      "name": "Ministral 3 3B",
+      "vision": true,
+      "tools": true,
+      "reasoning": false,
+      "context_length": 128000,
+      "max_output": 8192
+    },
+    {
+      "id": "qwen/qwen3.8-max:free",
+      "name": "Qwen3.8 Max (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.7-max:free",
+      "name": "Qwen3.7 Max (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.7-plus:free",
+      "name": "Qwen3.7 Plus (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "name": "Qwen3.6 Plus (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.6-max-preview:free",
+      "name": "Qwen3.6 Max Preview (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.6-27b:free",
+      "name": "Qwen3.6 27B (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.6-35b-a3b:free",
+      "name": "Qwen3.6 35B A3B (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.5-plus:free",
+      "name": "Qwen3.5 Plus (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.5-flash:free",
+      "name": "Qwen3.5 Flash (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b:free",
+      "name": "Qwen3.5 397B A17B (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.5-omni-plus:free",
+      "name": "Qwen3.5 Omni Plus (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3.5-omni-flash:free",
+      "name": "Qwen3.5 Omni Flash (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3-max:free",
+      "name": "Qwen3 Max (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3-coder-plus:free",
+      "name": "Qwen3 Coder Plus (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1048576,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3-omni-flash:free",
+      "name": "Qwen3 Omni Flash (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen3-vl-plus:free",
+      "name": "Qwen3 VL Plus (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "qwen/qwen-plus-2025-07-28:free",
+      "name": "Qwen Plus 0728 (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 131072,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m3:free",
+      "name": "MiniMax M3 (Free)",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 1000000,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2.7:free",
+      "name": "MiniMax M2.7 (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2.7-highspeed:free",
+      "name": "MiniMax M2.7 Highspeed (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2.5:free",
+      "name": "MiniMax M2.5 (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2.5-highspeed:free",
+      "name": "MiniMax M2.5 Highspeed (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2:free",
+      "name": "MiniMax M2 (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2.1:free",
+      "name": "MiniMax M2.1 (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "minimax/minimax-m2.1-highspeed:free",
+      "name": "MiniMax M2.1 Highspeed (Free)",
+      "vision": false,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 204800,
+      "max_output": 65536
+    },
+    {
+      "id": "sensenova/sensenova-6.8-flash-lite",
+      "name": "SenseNova 6.8 Flash-Lite",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    },
+    {
+      "id": "sensenova/sensenova-6.7-flash-lite",
+      "name": "SenseNova 6.7 Flash-Lite",
+      "vision": true,
+      "tools": true,
+      "reasoning": true,
+      "context_length": 262144,
+      "max_output": 65536
+    }
+  ]
+}
