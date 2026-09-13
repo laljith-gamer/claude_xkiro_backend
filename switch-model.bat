@@ -5,62 +5,55 @@ echo ============================================
 echo   xKiro Free Model Switcher
 echo ============================================
 echo.
+echo Note: Most DeepSeek, Qwen, and MiniMax models are no longer free.
+echo The following models are currently working on the free tier:
+echo.
 echo Select a free model to use:
 echo.
-echo --- DeepSeek (Best Overall) ---
-echo   1. deepseek/deepseek-v4-pro         [1M ctx, reasoning]
-echo   2. deepseek/deepseek-v4-flash       [1M ctx, fast]
-echo   3. deepseek/deepseek-v3.2           [131K ctx]
-echo   4. deepseek/deepseek-chat-v3.1      [164K ctx]
+echo --- Mistral ---
+echo   1. mistralai/mistral-large-2512     [256K ctx, Best Overall]
+echo   2. mistralai/codestral-2508         [256K ctx, Best Coding]
+echo   3. mistralai/mistral-small-2603     [256K ctx, Fast]
+echo   4. mistralai/mistral-medium-3.5     [256K ctx, Vision]
+echo   5. mistralai/devstral-medium        [256K ctx, Coding]
+echo   6. mistralai/ministral-14b          [256K ctx, Lightweight]
+echo   7. mistralai/ministral-8b           [256K ctx, Lightweight]
+echo   8. mistralai/ministral-3b           [128K ctx, Very Lightweight]
 echo.
-echo --- Qwen (Best Vision + Reasoning) ---
-echo   5. qwen/qwen3.8-max:free            [1M ctx, vision]
-echo   6. qwen/qwen3.7-max:free            [1M ctx]
-echo   7. qwen/qwen3.7-plus:free           [1M ctx, vision]
-echo   8. qwen/qwen3-coder-plus:free       [1M ctx, coding]
-echo   9. qwen/qwen3.5-flash:free          [1M ctx, vision]
+echo --- SenseNova ---
+echo   9. sensenova/sensenova-6.7-flash-lite [262K ctx, Fast]
 echo.
-echo --- Mistral (Coding Specialists) ---
-echo  10. mistralai/mistral-medium-3.5     [256K ctx, vision]
-echo  11. mistralai/codestral-2508         [256K ctx, coding]
-echo  12. mistralai/devstral-medium        [256K ctx, coding]
-echo  13. mistralai/mistral-large-2512     [256K ctx, vision]
-echo.
-echo --- MiniMax ---
-echo  14. minimax/minimax-m3:free          [1M ctx, vision]
-echo  15. minimax/minimax-m2.7:free        [205K ctx]
-echo.
-echo --- OpenAI ---
-echo  16. openai/gpt-5.3-codex-spark      [128K ctx, coding]
+echo --- Default / Auto ---
+echo  10. Clear UPSTREAM_MODEL (Use proxy.py auto-mapping)
 echo.
 
-set /p "choice=Enter number (1-16): "
+set /p "choice=Enter number (1-10): "
 
-if "%choice%"=="1" set "MODEL=deepseek/deepseek-v4-pro"
-if "%choice%"=="2" set "MODEL=deepseek/deepseek-v4-flash"
-if "%choice%"=="3" set "MODEL=deepseek/deepseek-v3.2"
-if "%choice%"=="4" set "MODEL=deepseek/deepseek-chat-v3.1"
-if "%choice%"=="5" set "MODEL=qwen/qwen3.8-max:free"
-if "%choice%"=="6" set "MODEL=qwen/qwen3.7-max:free"
-if "%choice%"=="7" set "MODEL=qwen/qwen3.7-plus:free"
-if "%choice%"=="8" set "MODEL=qwen/qwen3-coder-plus:free"
-if "%choice%"=="9" set "MODEL=qwen/qwen3.5-flash:free"
-if "%choice%"=="10" set "MODEL=mistralai/mistral-medium-3.5"
-if "%choice%"=="11" set "MODEL=mistralai/codestral-2508"
-if "%choice%"=="12" set "MODEL=mistralai/devstral-medium"
-if "%choice%"=="13" set "MODEL=mistralai/mistral-large-2512"
-if "%choice%"=="14" set "MODEL=minimax/minimax-m3:free"
-if "%choice%"=="15" set "MODEL=minimax/minimax-m2.7:free"
-if "%choice%"=="16" set "MODEL=openai/gpt-5.3-codex-spark"
+if "%choice%"=="1" set "MODEL=mistralai/mistral-large-2512"
+if "%choice%"=="2" set "MODEL=mistralai/codestral-2508"
+if "%choice%"=="3" set "MODEL=mistralai/mistral-small-2603"
+if "%choice%"=="4" set "MODEL=mistralai/mistral-medium-3.5"
+if "%choice%"=="5" set "MODEL=mistralai/devstral-medium"
+if "%choice%"=="6" set "MODEL=mistralai/ministral-14b"
+if "%choice%"=="7" set "MODEL=mistralai/ministral-8b"
+if "%choice%"=="8" set "MODEL=mistralai/ministral-3b"
+if "%choice%"=="9" set "MODEL=sensenova/sensenova-6.7-flash-lite"
+if "%choice%"=="10" set "MODEL="
 
-if "%MODEL%"=="" (
+if "%choice%"=="" (
     echo Invalid choice.
     pause
     exit /b 1
 )
 
-echo.
-echo Switching model to: %MODEL%
+if "%choice%"=="10" (
+    echo.
+    echo Clearing UPSTREAM_MODEL to use proxy mapping...
+) else (
+    echo.
+    echo Switching model to: %MODEL%
+)
+
 echo.
 
 :: Update the .env file

@@ -63,15 +63,15 @@ LISTEN_PORT = int(os.getenv("LISTEN_PORT", "3000"))
 # You can override any mapping in .env with MODEL_MAP_<CLAUDE_NAME>=<xkiro_model>
 DEFAULT_MODEL_MAP = {
     # Claude Model (from selector)         →  xKiro Free Model (actual)
-    "claude-opus-4.8":       "deepseek/deepseek-v4-pro",         # Best overall
-    "claude-sonnet-5":       "qwen/qwen3.8-max:free",            # Best vision+reasoning
-    "claude-fable-5":        "qwen/qwen3-coder-plus:free",       # Best for coding
-    "claude-opus-5":         "deepseek/deepseek-v4-flash",        # Fast + powerful
+    "claude-opus-4.8":       "mistralai/mistral-large-2512",      # Best overall
+    "claude-sonnet-5":       "mistralai/mistral-large-2512",      # Best vision+reasoning
+    "claude-fable-5":        "mistralai/codestral-2508",          # Best for coding
+    "claude-opus-5":         "mistralai/mistral-small-2603",      # Fast + powerful
     "claude-sonnet-4.6":     "mistralai/mistral-medium-3.5",      # Mistral vision
-    "claude-haiku-4.5":      "minimax/minimax-m3:free",           # Fast answers
-    "claude-opus-4.6":       "qwen/qwen3.7-max:free",            # Qwen reasoning
-    "claude-fable-5-1":      "openai/gpt-5.3-codex-spark",       # Codex coding
-    "claude-opus-4.7":       "qwen/qwen3.5-397b-a17b:free",      # Largest MoE
+    "claude-haiku-4.5":      "mistralai/ministral-3b",            # Fast answers
+    "claude-opus-4.6":       "mistralai/ministral-8b",            # Reasoning
+    "claude-fable-5-1":      "mistralai/devstral-medium",         # Coding
+    "claude-opus-4.7":       "sensenova/sensenova-6.7-flash-lite",# Alternative
 }
 
 # Load custom overrides from .env (e.g. MODEL_MAP_OPUS_4_8=deepseek/deepseek-v4-flash)
