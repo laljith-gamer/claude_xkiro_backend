@@ -50,15 +50,15 @@ Each Claude model in the selector maps to a free xKiro model:
 
 | Claude Model | xKiro Model |
 |-------------|-------------|
-| Opus 4.8 | `deepseek/deepseek-v4-pro` |
-| Sonnet 5 | `qwen/qwen3.8-max:free` |
-| Fable 5 | `qwen/qwen3-coder-plus:free` |
-| Opus 5 | `deepseek/deepseek-v4-flash` |
+| Opus 4.8 | `mistralai/mistral-large-2512` |
+| Sonnet 5 | `mistralai/mistral-large-2512` |
+| Fable 5 | `mistralai/codestral-2508` |
+| Opus 5 | `mistralai/mistral-small-2603` |
 | Sonnet 4.6 | `mistralai/mistral-medium-3.5` |
-| Haiku 4.5 | `minimax/minimax-m3:free` |
-| Opus 4.6 | `qwen/qwen3.7-max:free` |
-| Fable 5.1 | `openai/gpt-5.3-codex-spark` |
-| Opus 4.7 | `qwen/qwen3.5-397b-a17b:free` |
+| Haiku 4.5 | `mistralai/ministral-3b` |
+| Opus 4.6 | `mistralai/ministral-8b` |
+| Fable 5.1 | `mistralai/devstral-medium` |
+| Opus 4.7 | `sensenova/sensenova-6.7-flash-lite` |
 
 ## Files
 
